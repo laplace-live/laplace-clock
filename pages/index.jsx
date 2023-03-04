@@ -25,6 +25,8 @@ import { config } from '@/data/config.js'
 import styles from '../styles/Clock.module.scss'
 // import 'react-clock/dist/Clock.css';
 
+const isDesktop = process.env.DESKTOP === 'true'
+
 const fontZCOOLXiaoWei = ZCOOL_XiaoWei({
   weight: ['400'],
   subsets: ['latin'],
@@ -187,8 +189,14 @@ function About() {
   const defaultFontString = 'var(--clock-font-zcool-xiaowei)'
 
   const [time, setTime] = useState('00:00:00');
+  const [tempBg, setTempBg] = useState(defaultTempBg);
+  const [colorTint, setColorTint] = useState(defaultColorTint);
+  const [linkTint, setLinkTint] = useState(defaultLinkTint);
+  const [boldTint, setBoldTint] = useState(defaultBoldTint);
+
   // const [color, setColor] = useQueryParam('color', withDefault(StringParam, defaultColor));
   // const [color, setColor] = useLocalStorageState(`clockColor`, { defaultValue: defaultColor })
+
   const [color, setColor] = useQueryParam('color', withDefault(StringParam, defaultColor))
   const [color2, setColor2] = useQueryParam('color2', withDefault(StringParam, defaultColor2));
   const [anaText, setAnaText] = useQueryParam('anaText', withDefault(StringParam, defaultAnaText));
@@ -197,10 +205,6 @@ function About() {
   const [borderSize, setBorderSize] = useQueryParam('borderSize', withDefault(NumberParam, 1));
   const [gradientDeg, setGradientDeg] = useQueryParam('gradientDeg', withDefault(NumberParam, 180));
   const [dateSize, setDateSize] = useQueryParam('dateSize', withDefault(NumberParam, 3));
-  const [tempBg, setTempBg] = useState(defaultTempBg);
-  const [colorTint, setColorTint] = useState(defaultColorTint);
-  const [linkTint, setLinkTint] = useState(defaultLinkTint);
-  const [boldTint, setBoldTint] = useState(defaultBoldTint);
   const [is12h, setIs12h] = useQueryParam('12h', withDefault(BooleanParam, false));
   const [showDate, setShowDate] = useQueryParam('showDate', withDefault(BooleanParam, false));
   const [locale, setLocale] = useQueryParam('locale', withDefault(StringParam, 'default'));
