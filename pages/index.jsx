@@ -19,11 +19,11 @@ import useLocalStorageState from 'use-local-storage-state'
 import { useQueryParam, NumberParam, StringParam, BooleanParam, withDefault } from 'use-query-params';
 import { ColorInput } from '@mantine/core';
 import { colord } from "colord";
-import Clock from 'react-clock'
+// import Clock from 'react-clock'
 import { config } from '@/data/config.js'
 
 import styles from '../styles/Clock.module.scss'
-import 'react-clock/dist/Clock.css';
+// import 'react-clock/dist/Clock.css';
 
 const fontZCOOLXiaoWei = ZCOOL_XiaoWei({
   weight: ['400'],
@@ -451,7 +451,7 @@ function About() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <Clock
             value={time}
             renderNumbers={true}
@@ -461,7 +461,7 @@ function About() {
             minuteHandWidth={6}
             secondHandWidth={3}
           />
-        </div>
+        </div> */}
 
         <h1>OBS 时钟前端版</h1>
 
