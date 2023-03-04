@@ -191,7 +191,7 @@ function About() {
   const defaultBoldTint = '#000'
   const defaultFontString = 'var(--clock-font-zcool-xiaowei)'
 
-  const [time, setTime] = useState('00:00:00');
+  const [time, setTime] = useState<Date | '00:00:00'>('00:00:00');
   const [tempBg, setTempBg] = useState(defaultTempBg);
   const [colorTint, setColorTint] = useState(defaultColorTint);
   const [linkTint, setLinkTint] = useState(defaultLinkTint);
@@ -272,7 +272,7 @@ function About() {
     setBoldTint(boldComputed)
   }, [color, tempBg])
 
-  function validateLocale(locale) {
+  function validateLocale(locale: Intl.LocalesArgument | 'default') {
     if (locale === 'default') {
       return undefined
     }
@@ -282,17 +282,17 @@ function About() {
     return undefined
   }
 
-  function validateDateOptions(option, obj) {
+  function validateDateOptions(option: any, obj: any) {
     if (option === 'hidden') {
       return undefined
     }
-    if (obj.some(e => e.value === option)) {
+    if (obj.some((e: any) => e.value === option)) {
       return option
     }
     return undefined
   }
 
-  function validatePosition(position) {
+  function validatePosition(position: string) {
     if (positionOptions.some(e => e.value === position)) {
       return position
     }
@@ -499,7 +499,7 @@ function About() {
 
               <p>渐变角度 {gradientDeg}</p>
               <input type="range" className="custom-range" min="0" max="360" step="10"
-                value={gradientDeg} onChange={e => setGradientDeg(e.target.value)} />
+                value={gradientDeg} onChange={e => setGradientDeg(Number(e.target.value))} />
             </>
           )}
 
@@ -510,7 +510,7 @@ function About() {
 
           <p>描边粗细：{borderSize}</p>
           <input type="range" className="custom-range" min="-1" max="5"
-            value={borderSize} onChange={e => setBorderSize(e.target.value)} />
+            value={borderSize} onChange={e => setBorderSize(Number(e.target.value))} />
 
           <p>
             文本对齐方式
@@ -640,7 +640,7 @@ function About() {
 
               <p>日期字体大小 {dateSize}em</p>
               <input type="range" className="custom-range" min="1" max="5" step="0.02"
-                value={dateSize} onChange={e => setDateSize(e.target.value)} />
+                value={dateSize} onChange={e => setDateSize(Number(e.target.value))} />
             </>
           )}
 
