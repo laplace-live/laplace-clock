@@ -184,6 +184,7 @@ function About() {
   const defaultColorTint = '#000'
   const defaultLinkTint = '#31783e'
   const defaultBoldTint = '#000'
+  const defaultFontString = 'var(--clock-font-zcool-xiaowei)'
 
   const [time, setTime] = useState('00:00:00');
   // const [color, setColor] = useQueryParam('color', withDefault(StringParam, defaultColor));
@@ -203,7 +204,7 @@ function About() {
   const [is12h, setIs12h] = useQueryParam('12h', withDefault(BooleanParam, false));
   const [showDate, setShowDate] = useQueryParam('showDate', withDefault(BooleanParam, false));
   const [locale, setLocale] = useQueryParam('locale', withDefault(StringParam, 'default'));
-  const [fontString, setFontString] = useQueryParam('fontString', withDefault(StringParam, ''));
+  const [fontString, setFontString] = useQueryParam('fontString', withDefault(StringParam, defaultFontString));
   const [position, setPosition] = useQueryParam('position', withDefault(StringParam, ''));
   const [singleColor, setSingleColor] = useQueryParam('singleColor', withDefault(BooleanParam, false));
   const [showSecond, setShowSecond] = useQueryParam('showSecond', withDefault(BooleanParam, true));
@@ -436,7 +437,7 @@ function About() {
       </Head>
 
       <main>
-        <Link href="/">拜访 LAPLACE 花店</Link>
+        <Link href={`https://${config.siteDomain}`}>拜访 LAPLACE 花店</Link>
 
         <div className='title-wrap'>
           <div className='title-content'>
@@ -653,7 +654,7 @@ function About() {
           </p>
         </details>
 
-        <details>
+        {/* <details>
           <summary>传统时钟配置</summary>
           <p>文字颜色</p>
           <div className='picker-wrap'>
@@ -664,7 +665,7 @@ function About() {
           <div className='picker-wrap'>
             <ColorInput value={anaBg} onChange={setAnaBg} format='hexa' swatches={[defaultAnaBg, ...swatches]} styles={(theme) => (colorInputStyles)} />
           </div>
-        </details>
+        </details> */}
 
         <details>
           <summary>全局设置</summary>
@@ -769,23 +770,6 @@ function About() {
         <ul>
           <li>出于部署便捷性以及隐私考虑，本站目前架设在境外，如访问困难可尝试通过代理访问</li>
           <li>本网站未使用第三方统计例如 Google Analytics、Cloudflare Analytics 等统计工具，不会将访问数据提供给第三方</li>
-          <li>本站会收集脱敏后的访问记录用于数据分析，此记录不会收集 IP 地址等敏感信息，本站也无法通过此数据特定到使用者的身份。具体收集的内容（举例）如下：
-            <pre>
-              <code>
-                {`{
-  "type": "pageview",
-  "payload": {
-    "website": "e3d77a1b-...",
-    "hostname": "laplace.live",
-    "screen": "1920x1080",
-    "language": "en-US",
-    "url": "/clock",
-    "referrer": ""
-  }
-}`}
-              </code>
-            </pre>
-          </li>
         </ul>
 
       </main>

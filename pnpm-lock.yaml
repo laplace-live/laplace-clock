@@ -11,6 +11,7 @@ specifiers:
   colord: 2.9.3
   eslint: 8.35.0
   eslint-config-next: 13.2.3
+  kladenets: 2.0.0-15
   next: 13.2.3
   next-query-params: 4.1.0
   react: 18.2.0
@@ -31,6 +32,7 @@ dependencies:
   colord: 2.9.3
   eslint: 8.35.0
   eslint-config-next: 13.2.3_ycpbpc6yetojsgtrx3mwntkhsu
+  kladenets: 2.0.0-15
   next: 13.2.3_wiv434v7erz4aedd5whhdwmpv4
   next-query-params: 4.1.0_n6hgbewgdk4bt34ra23tuwymri
   react: 18.2.0
@@ -2114,6 +2116,10 @@ packages:
     dependencies:
       array-includes: 3.1.6
       object.assign: 4.1.4
+    dev: false
+
+  /kladenets/2.0.0-15:
+    resolution: {integrity: sha512-vMPcVq7JH/w0hZ1bBjycXBfVav6ZT3lWId3TusOPosyaXyYxP0n/RhT5KdGPytBJy4zl+Y8N/UYl6lQ452yx8w==}
     dev: false
 
   /language-subtag-registry/0.3.22:

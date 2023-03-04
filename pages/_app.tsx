@@ -1,4 +1,5 @@
-import '@/styles/globals.css'
+import 'kladenets'
+import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 
 import { NextAdapter } from 'next-query-params'
