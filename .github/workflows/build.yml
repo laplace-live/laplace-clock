@@ -16,7 +16,6 @@ on:
 
 env:
   DOCKERHUB_SLUG: sparanoid/laplace-clock
-  GHCR_SLUG: ghcr.io/laplace-live/laplace-clock
 
 jobs:
   build:
@@ -57,7 +56,6 @@ jobs:
       with:
         images: |
           ${{ env.DOCKERHUB_SLUG }}
-          ${{ env.GHCR_SLUG }}
         tags: |
           type=edge
           type=schedule
