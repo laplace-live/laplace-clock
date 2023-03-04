@@ -441,6 +441,7 @@ function About() {
       <Head>
         <title>{`OBS 时钟${config.siteTitleSplitter}${config.siteTitle}`}</title>
         <meta name="description" content="用于 OBS 的纯前端实现的时钟挂件" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>
