@@ -678,7 +678,19 @@ function About() {
         <details>
           <summary>全局设置</summary>
 
+          <p>
+            <label>
+              <input
+                type="checkbox"
+                id="isBold"
+                onChange={e => setIsBold(e.target.checked)} checked={isBold}
+              />
+              粗体
+            </label>
+          </p>
+
           <p>自定义本地字体（非 <code>var(--...</code> 开头的字体，本地<strong>必须</strong>存在该字体，方可生效）</p>
+          <p>本站支持所有 <a href="https://fonts.google.com/" rel='noopener noreferrer' target='_blank'>Google Fonts</a> 上的字体，推荐预置字体请联系 <a href={`mailto:${config.siteEmail}`}>{config.siteEmail}</a> 添加</p>
           <input id="fontString" type="text" placeholder="输入字体名称"
             value={fontString} onChange={e => setFontString(e.target.value)} />{' '}
 
