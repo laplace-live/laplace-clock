@@ -19,7 +19,7 @@ specifiers:
   react-dom: 18.2.0
   sass: 1.58.3
   typescript: 4.9.5
-  use-local-storage-state: 18.1.2
+  use-local-storage-state: 18.2.1
   use-query-params: 2.2.0
 
 dependencies:
@@ -39,7 +39,7 @@ dependencies:
   react-clock: 4.1.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
   typescript: 4.9.5
-  use-local-storage-state: 18.1.2_biqbaboplfbrettd7655fr4n2y
+  use-local-storage-state: 18.2.1_biqbaboplfbrettd7655fr4n2y
   use-query-params: 2.2.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
@@ -2962,8 +2962,8 @@ packages:
       use-isomorphic-layout-effect: 1.1.2_pmekkgnqduwlme35zpnqhenc34
     dev: false
 
-  /use-local-storage-state/18.1.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-V+kYQNC5R0N/JDpsg6b4ED5UaItKJcSvbne68DwJDZWHxGMQBiF41ATktFIOyet3PIq30d2qtzVp/2aB6hQ8Bg==}
+  /use-local-storage-state/18.2.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-JgFWmMIIsN3uIQ2hSDhYGiYdfykMFVPNX/vz5JX/9V1igJSUjEe30CgswH076YqBx4Njea1NJ6B4farIlnSLuA==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=18'
