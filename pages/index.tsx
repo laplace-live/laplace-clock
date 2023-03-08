@@ -792,6 +792,8 @@ function About() {
           <li>本网站未使用第三方统计例如 Google Analytics、Cloudflare Analytics 等统计工具，不会将访问数据提供给第三方</li>
         </ul>
 
+        <p>Brought to you by laplace.live</p>
+
       </main>
     </div>
   )
